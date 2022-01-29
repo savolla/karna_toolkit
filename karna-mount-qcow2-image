@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+export QCOW2_TO_MOUNT="$1"
+export MOUNT_POINT="/tmp/$(echo $IMAGE_TO_MOUNT | tr -d ".qcow2")"
+
+qemu-nbd --connect=/dev/nbd0 "$QCOW2_TO_MOUNT"
+fdisk /dev/nbd0 -l
+mount /dev/nbd0p1 "$MOUNT_POINT"
+cd "$MOUNT_POINT" || exit

@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+export HOST0="gnu.org"
+export HOST1="google.com"
+COUNTER=0
+
+if [[ $(ping -c 1 $HOST0 2> /dev/null) ]]
+then
+	COUNTER="$(($COUNTER+1))"
+fi
+
+if [[ $(ping -c 1 $HOST1 2> /dev/null) ]]
+then
+	COUNTER="$(($COUNTER+1))"
+fi
+
+if [[ $(echo $COUNTER) == "2" ]]
+then
+	echo "yup! you are CONNECTED to the internet!"
+else
+	echo "nope.."
+fi

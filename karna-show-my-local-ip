@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+
+ifconfig | grep -v inet6 | grep inet | awk '{ print $2 }' | grep -v "127.0.0.1"
