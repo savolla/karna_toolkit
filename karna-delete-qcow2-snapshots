@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+export VM_NAME="$1"
+export QEMU_IMAGES_PATH="/var/lib/libvirt/images/"
+
+SNAPSHOT_LIST="$(qemu-img snapshot -l "$VM_NAME" | awk '{ print $2 }')"
+
+echo $SNAPSHOT_LIST
