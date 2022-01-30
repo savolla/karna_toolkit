@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+if [[ $(which arp-scan 2> /dev/null) ]]
+then
+    sudo arp-scan -lq | grep "^[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*" | awk '{ print $1 }'
+else
+    echo -e "arp-scan is not installed. Do you want me to install it for you? Y/n"
+    read -r ANSWER
+    if [[ $ANSWER == "n" ]]
+    then
+        echo -e "well.."
+        exit
+    else
+        sudo pacman -S arp-scan --noconfirm
+    fi
+fi
