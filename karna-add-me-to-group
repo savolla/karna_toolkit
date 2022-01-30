@@ -1,4 +1,13 @@
 #!/bin/bash
 #
+for group in $(karna-show-available-groups)
+do
+    if [[ "$1" == "$group" ]]
+    then
+        sudo usermod -a -G "$(whoami)" "$1"
+        echo -e "KARNA: I added you to $1 group!"
+        exit
+    fi
+done
 
-sudo usermod -a -G "$(whoami)" "$1"
+echo -e "KARNA: I could not find any group named $1. Maybe you miss spelled it?"

@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+export PATH_TO_KARNA_SCRIPTS="$HOME/project/karna_toolkit/"
+PREVIOUS_WORKING_DIRECTORY=$(pwd)
+
+cd "$PATH_TO_KARNA_SCRIPTS" || exit
+for KARNA_SCRIPT in $(ls karna-*)
+do
+    ls $KARNA_SCRIPT
+done
+cd "$PREVIOUS_WORKING_DIRECTORY" || exit
