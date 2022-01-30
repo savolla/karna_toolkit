@@ -1,5 +1,3 @@
 #!/bin/bash
 #
-echo -e "KARNA: Let's remove $1.."
-sudo pacman -Syy
-sudo pacman -S "$1" --noconfirm --needed
+echo -e "KARNA: Okay let's get rid of $1"

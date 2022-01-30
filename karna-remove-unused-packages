@@ -5,5 +5,5 @@ sudo pacman -Rs "$(pacman -Qdtq)"
 
 if [[ "$?" -ne "0" ]]
 then
-    echo -e "Your system is already clean ;\)"
+    echo -e "Your system is already clean ;)"
 fi
