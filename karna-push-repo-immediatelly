@@ -7,6 +7,7 @@ PREVIOUS_WORKING_DIRECTORY=$(pwd)
 cd "$MY_REPOS"/"$1" || exit
 git add --all
 git commit -m "$COMMIT_MESSAGE"
-git push -u origin main
+CURRENT_REPO_BRANCH=$(git branch | tr -d "* ")
+git push -u origin $CURRENT_REPO_BRANCH
 cd "$PREVIOUS_WORKING_DIRECTORY" || exit
-echo "KARNA: High five!"
+echo "KARNA: Finished :*"

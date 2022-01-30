@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+export PACKAGE="python-pywal"
+export PACKAGE_ALIAS="pywal"
+
+if [[ $(which "$PACKAGE_ALIAS" 2> /dev/null) ]]
+then
+    sudo arp-scan -lq | grep "^[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*" | awk '{ print $1 }'
+    wal -i "$HOME/.config/background-image"
+else
+    echo -e "$PACKAGE_ALIAS is not installed. Do you want me to install it for you? Y/n"
+    read -r ANSWER
+    if [[ $ANSWER == "n" ]]
+    then
+        echo -e "well.."
+        exit
+    else
+        ./karna-install "$PACKAGE"
+    fi
+fi
