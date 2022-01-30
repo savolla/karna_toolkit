@@ -1,6 +1,12 @@
 #!/bin/bash
 #
-export MY_REPOS="$HOME/project/"
+export MY_REPOS="$HOME/project"
+COMMIT_MESSAGE=$(curl -s http://whatthecommit.com | perl -p0e '($_)=m{<p>(.+?)</p>}s')
+PREVIOUS_WORKING_DIRECTORY=$(pwd)
 
-echo -e "KARNA: hey $(whoami)! these are your repos."
-./karna-show-my-repos
+cd "$MY_REPOS"/"$1" || exit
+git add --all
+git commit -m "$COMMIT_MESSAGE"
+git push -u origin main
+cd "$PREVIOUS_WORKING_DIRECTORY" || exit
+echo "KARNA: High five!"

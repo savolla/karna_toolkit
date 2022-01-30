@@ -5,8 +5,8 @@ for group in $(karna-show-available-groups)
 do
     if [[ "$1" == "$group" ]]
     then
-        sudo usermod -a -G "$CURRENT_USER" "$1"
-        echo -e "KARNA: I added you to $1 group!"
+        sudo gpasswd --delete "$CURRENT_USER" "$1"
+        echo -e "KARNA: I removed you from $1!"
         exit
     fi
 done
