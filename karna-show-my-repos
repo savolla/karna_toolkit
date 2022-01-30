@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+export MY_REPOS="$HOME/project/"
+ls "$MY_REPOS"

@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+echo -e "KARNA: hey $(whoami)! let's see if I can find $1"
+sudo pacman -Syy
+sudo pacman -S "$1" --noconfirm --needed

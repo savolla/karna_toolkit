@@ -1,5 +1,10 @@
 #!/bin/bash
 #
 export PATH_TO_DOTFILES="$HOME/project/dotfiles/"
+export PATH_TO_KARNA_SCRIPTS="$HOME/project/karna_toolkit/"
+PREVIOUS_WORKING_DIRECTORY=$(pwd)
+
+cd "$PATH_TO_KARNA_SCRIPTS" || exit
 cp -lRf karna-* "$PATH_TO_DOTFILES"/.scripts/
 cp -lRf karna-* "$HOME"/.scripts
+cd "$PREVIOUS_WORKING_DIRECTORY" || exit

@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+export MY_REPOS="$HOME/project/"
+
+echo -e "KARNA: hey $(whoami)! these are your repos."
+./karna-show-my-repos
