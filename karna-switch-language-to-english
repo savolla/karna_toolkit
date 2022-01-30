@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+export ENGLISH="en_US.UTF-8"
+export TURKISH="tr_TR.UTF-8"
+
+sudo localectl set-locale LANG=$ENGLISH
+sudo locale-gen
+echo -e "You need to reboot now."
