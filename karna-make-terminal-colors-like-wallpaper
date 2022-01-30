@@ -15,6 +15,6 @@ else
         echo -e "well.."
         exit
     else
-        ./karna-install "$PACKAGE"
+        karna-install "$PACKAGE"
     fi
 fi

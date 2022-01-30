@@ -1,9 +1,15 @@
 #!/bin/bash
 #
 echo -e "KARNA: Oh okay."
-sudo pacman -Rs "$(pacman -Qdtq)"
+sudo pacman -Rs "$(pacman -Qdtq)" 2> /dev/null
 
-if [[ "$?" -ne "0" ]]
-then
-    echo -e "Your system is already clean ;)"
-fi
+while [[ "$?" -eq "1"  ]]
+do
+    sudo pacman -Rs "$(pacman -Qdtq)"
+
+    if [[ "$?" -ne "0" ]]
+    then
+        echo -e "Your system is already clean ;)"
+        exit
+    fi
+done

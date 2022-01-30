@@ -1,3 +1,5 @@
 #!/bin/bash
 #
 echo -e "KARNA: Okay let's get rid of $1"
+sudo pacman -Rs "$1"
+yes | sudo pacman -Scc

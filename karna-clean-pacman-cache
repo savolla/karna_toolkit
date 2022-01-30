@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+echo -e "KARNA: Cleaning pacman cache"
+yes | sudo pacman -Scc
