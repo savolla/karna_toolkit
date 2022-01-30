@@ -1,9 +1,14 @@
 #!/bin/bash
 #
 echo -e "KARNA: Orphans? Well let's see.."
-sudo pacman -Rs "$(pacman -Qdtq)"
+while [[ "$?" -eq "0"  ]]
+do
+    sudo pacman -Rs "$(pacman -Qdtq)"
 
-if [[ "$?" -ne "0" ]]
-then
-    echo -e "There are no \"Orphans\" to remove :/"
-fi
+    if [[ "$?" -ne "0" ]]
+    then
+        echo -e "There are no \"Orphans\" to remove :/"
+    fi
+    echo $?
+done
+
