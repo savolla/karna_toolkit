@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+echo -e "KARNA: I don't really recommend updating your system on Arch but okay.."
+sudo pacman -Syu
+echo -e "KARNA: All done!"
