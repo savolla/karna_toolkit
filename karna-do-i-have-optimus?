@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+echo -e "KARNA: Checking for dual GPUs on this system.."
+
+RESULT=$(lspci | grep -E "VGA|3D" | wc -l)
+
+if [[ $RESULT -eq 2 ]]
+then
+    echo -e "KARNA: Yes! There are 2 GPUs there"
+
+elif [[ $RESULT -eq 3 ]]
+     then
+    echo -e "KARNA: WOW! there are 3 GPUs !!"
+
+else
+	echo "nope.."
+fi
