@@ -1,0 +1,3 @@
+#!/bin/bash
+#
+echo -e "KARNA: hey $(whoami)! let's see if I can find $1"
