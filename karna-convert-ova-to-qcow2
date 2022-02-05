@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+NEW_QCOW2_NAME=$(echo $1 | tr -d ".ova")
+echo -e "KARNA: First I need to extract $1"
+tar -xvf "$1"
+echo -e "KARNA: Extraction done. Now converting"
+qemu-img convert "$1"001.vmdk "$NEW_QCOW2_NAME".qcow2 -O qcow2
+echo -e "KARNA: All done! I messed up this directory a bit. Sorry for that :)"
