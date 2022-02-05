@@ -1,3 +1,4 @@
+sleep 1
 xrandr -s 800x600
 xrandr -s 1920x1080x50
 i3 restart
