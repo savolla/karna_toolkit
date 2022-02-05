@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# first install all the packages needed
+sudo pacman -S \
+    unclutter \
+    screenkey \
+    flameshot \
+    kitty \
+    brave-browser \
+    pavucontrol \
+    rofi \
+    emacs \
+    ranger \
+    sxiv \
+    signal-desktop \
+    retroarch \
+    bat \
+    pulseaudio-equalizer \
+    xcalib \
+    net-tools \
+    ttf-fira-code \
+    tmux \
+    htop \
+    ccls \
+    telegram-desktop \
+    signal-desktop \
+    --needed
