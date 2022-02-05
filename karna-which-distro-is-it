@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+DISTRO_NAME=$(cat /etc/os-release | grep "^NAME=" | awk -F "=" '{ print $2 }' )
+echo -e "KARNA: It's $DISTRO_NAME !"
