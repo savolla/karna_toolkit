@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+export PATH_TO_VMS="$HOME/vms"
+export TIME_DELAY=3
+export SIZE_TO_SHRINK=10
+
+echo -e "KARNA: I'm gonna shutdown the vm first."
+sudo virsh shutdown "$1"
+sleep "$TIME_DELAY"
+cd "$PATH_TO_VMS" || exit
+echo -e "KARNA: now I'm shrinking $1.qcow2 by $SIZE_TO_SHRINK GB"
+sudo virt-sparsify "$1".qcow2 "$1"-shrinked.qcow2
+echo -e "KARNA: all done :*"

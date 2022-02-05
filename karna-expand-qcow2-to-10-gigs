@@ -8,4 +8,6 @@ echo -e "KARNA: I'm gonna shutdown the vm first."
 sudo virsh shutdown "$1"
 sleep "$TIME_DELAY"
 cd "$PATH_TO_VMS" || exit
-sudo qemu-img resize "$1".qcow2 "$SIZE_TO_INCREASE"
+echo -e "KARNA: now I'm resizing $1.qcow2 to $SIZE_TO_INCREASE GB"
+sudo qemu-img resize "$1".qcow2 "$SIZE_TO_INCREASE"G
+echo -e "KARNA: all done :*"
