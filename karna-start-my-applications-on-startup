@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+export QT_SCALE_FACTOR=1
+quassel &
+emacs &
+brave &
+feedreader &
+telegram-desktop &
+signal-desktop &
+# QT_SCALE_FACTOR=0.5
+# okular &
