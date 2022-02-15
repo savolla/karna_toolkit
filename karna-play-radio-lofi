@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+export LOFI_RADIO_URL="https://www.youtube.com/watch?v=5qap5aO4i9A"
+mpv -vo null "$LOFI_RADIO_URL"

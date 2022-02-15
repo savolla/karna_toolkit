@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+karna-make-all-karna-scripts-executable
+karna-put-all-karna-commands-to-dotfiles-and-scripts-folder
+
+if [[ $? -eq 0 ]]
+then
+    echo -e "KARNA: Toolkit is updated!!"
+else
+    echo -e "KARNA: I couldn't do that sorry.."
+fi

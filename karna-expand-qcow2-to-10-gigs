@@ -9,5 +9,5 @@ sudo virsh shutdown "$1"
 sleep "$TIME_DELAY"
 cd "$PATH_TO_VMS" || exit
 echo -e "KARNA: now I'm resizing $1.qcow2 to $SIZE_TO_INCREASE GB"
-sudo qemu-img resize "$1".qcow2 "$SIZE_TO_INCREASE"G
+sudo qemu-img resize "$1" +"$SIZE_TO_INCREASE"G
 echo -e "KARNA: all done :*"

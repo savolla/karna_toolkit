@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+export CRYOCHAMBER_RADIO_URL="https://www.youtube.com/watch?v=wVLRQUZ0Gls"
+mpv -vo null "$CRYOCHAMBER_RADIO_URL"
