@@ -7,6 +7,6 @@ brave &
 feedreader &
 telegram-desktop &
 signal-desktop &
-foliate &
+# foliate &
 # QT_SCALE_FACTOR=0.5
 # okular &
