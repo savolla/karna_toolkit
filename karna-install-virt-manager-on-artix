@@ -12,14 +12,16 @@ then
     sudo pacman -S libvirt-openrc
 
     echo -e "KARNA: enabling services!"
-    sudo rc-update add libvirtd.service
-    sudo rc-service libvirtd.service start
+    sudo rc-update add libvirtd
+    sudo rc-service libvirtd start
 
     echo -e "KARNA: enabling default network!"
-    sudo virtsh net-autostart default
+    sudo virsh net-autostart default
 
     echo -e "KARNA: changing permissions of /run/media"
     sudo chmod a+x /run/media/"$USER"
+
+    sudo pacman -S acpilight
 
     echo -e "KARNA: I think thats it. Here is virt-manager"
     sudo virt-manager
