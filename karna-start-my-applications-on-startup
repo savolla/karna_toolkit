@@ -1,10 +1,10 @@
 #!/bin/bash
 #
-export QT_SCALE_FACTOR=1
-quassel &
+# export QT_SCALE_FACTOR=1
+# quassel &
 emacs &
-brave &
-feedreader &
+firefox &
+# feedreader &
 telegram-desktop &
 signal-desktop &
 # foliate &
