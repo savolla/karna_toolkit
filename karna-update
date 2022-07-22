@@ -1,5 +1,14 @@
 #!/bin/bash
 #
-echo -e "KARNA: I don't really recommend updating your system on Arch but okay.."
+echo -e "KARNA: Updating the keyring!"
+sudo pacman -Sy archlinux-keyring
+
+echo -e "KARNA: Populating keys!"
+sudo pacman-key --populate archlinux
+
+echo -e "KARNA: Refreshing keys."
+sudo pacman-key --refresh-keys
+
+echo -e "KARNA: Updating finally updating system!"
 sudo pacman -Syu
 echo -e "KARNA: All done!"
