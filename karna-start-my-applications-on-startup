@@ -3,10 +3,10 @@
 # export QT_SCALE_FACTOR=1
 # quassel &
 emacs &
-firefox &
+librewolf &
 # feedreader &
-telegram-desktop &
-signal-desktop &
+# telegram-desktop &
+# signal-desktop &
 # foliate &
 # QT_SCALE_FACTOR=0.5
 # okular &
