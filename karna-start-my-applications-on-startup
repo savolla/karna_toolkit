@@ -2,8 +2,9 @@
 #
 # export QT_SCALE_FACTOR=1
 # quassel &
-emacs &
+# emacs &
 librewolf &
+logseq &
 # feedreader &
 # telegram-desktop &
 # signal-desktop &
