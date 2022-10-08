@@ -11,4 +11,13 @@ sudo pacman-key --refresh-keys
 
 echo -e "KARNA: Updating finally updating system!"
 sudo pacman -Syu
+echo -e "KARNA: updated!"
+
+echo -e "KARNA: wanna update AUR packages too? (assuming yay is installed)"
+yay -Syu
+echo -e "KARNA: updated AUR!"
+
+echo -e "KARNA: delete cache both from AUR and pacman?"
+sudo pacman -Scc
+yay -Sc
 echo -e "KARNA: All done!"
