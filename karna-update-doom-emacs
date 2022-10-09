@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+echo -e "KARNA: Updating Doom Emacs!"
+"$HOME"/.emacs.d/bin/doom upgrade
+echo -e "KARNA: Updating Done!"
