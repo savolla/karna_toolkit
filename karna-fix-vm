@@ -1,5 +1,5 @@
-sleep 1
-xrandr -s 800x600
-xrandr -s 1920x1080x50
-i3 restart
+# sleep 1
+# xrandr -s 800x600
+# xrandr -s 1920x1080x50
+# i3 restart
 feh --bg-scale /home/savolla/.config/background-image # set background image with sxiv
